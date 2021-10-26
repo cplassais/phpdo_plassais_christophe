@@ -1,0 +1,11 @@
+RewriteEngine On
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} \.(gif|png|jpe?g|ico|swf)$ [NC]
+RewriteRule .* - [R=404,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /dispatcher.php [L]
