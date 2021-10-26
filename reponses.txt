@@ -1,0 +1,32 @@
+1) A quoi sert la fonction suivante : spl_autoload_register ?
+   cette fonction permet d'accéder à partir de tout le projet aux classes définies dans le dossier Models
+   on l'a définie dans le fichier index.php ou dispatcher.php
+2) permet à une classe de récuperer (heritage) de toutes les propriétés et méthodes de la classe parente
+   par contre un parent n'hérite pas d'un enfant.php, cette heritage est definie dans la classe avec la méthode "extend"
+3)
+<?php
+class Enfant extend Personne {
+    private $origin;
+
+    public function __construct() {
+
+    }
+
+    class Professeur extend Personne {
+
+        private $matiere;
+
+
+        public function __construct() {
+
+        }
+        class Personne {
+
+            protected $name;
+            protected $firstname;
+            protected $birthdate;
+
+            public function __construct() {
+
+            }
+?>
