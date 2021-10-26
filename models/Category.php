@@ -117,9 +117,9 @@ class Category extends Db
 
         $query = 'SELECT * FROM category WHERE id = :id';
         $aBindParam = array('id' => $id);
-        $oSubject = $dbc->select($query, $aBindParam);
+        $oCategory = $dbc->select($query, $aBindParam);
 
-        return $oSubject;
+        return $oCategory;
     }
 
     /**
@@ -135,9 +135,9 @@ class Category extends Db
     {
         $query = 'UPDATE category SET title = :title, description = :description, picture = :picture, parent = :parent WHERE id = :id';
         $aBindParam = array('id' => $id, 'title' => $title, 'description' => $description, 'picture' => $picture, 'parent' => $parent);
-        $oSubject = $dbc->update($query, $aBindParam);
+        $oCategory = $dbc->update($query, $aBindParam);
 
-        return $oSubject;
+        return $oCategory;
     }
 
     /**
@@ -169,7 +169,7 @@ class Category extends Db
                     picture = :picture,
                     parent = :parent';
         $aBindParam = array('title' => $title, 'description' => $description, 'picture' => $picture, 'parent' => $parent);
-        $oSubject = $dbc->select($query, $aBindParam);
-        return $oSubject;
+        $oCategories = $dbc->select($query, $aBindParam);
+        return $oCategories;
     }
 }

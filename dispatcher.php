@@ -22,6 +22,11 @@ try {
         case 'categorydelete':
             include 'controllers/categoryDeleteController.php';
             break;
+        case 'categoryadd':
+            include 'controllers/categoryAddController.php';
+            break;case 'categoryupdate':
+        include 'controllers/categoryUpdateController.php';
+        break;
         default:
             include 'controllers/errorPageController.php';
     }

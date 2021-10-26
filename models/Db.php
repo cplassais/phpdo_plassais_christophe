@@ -14,6 +14,7 @@ class Db extends PDO
      */
     public function select($squery, $array = array(), $fetchMode = PDO::FETCH_CLASS)
     {
+
         $sth = $this->prepare($squery);
         foreach ($array as $key => $value):
             $sth->bindValue("$key", $value);
@@ -48,4 +49,5 @@ class Db extends PDO
         endforeach;
         $sth->execute();
     }
+
 }
